@@ -1,0 +1,282 @@
+/* General Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding-top: 0px;
+}
+
+/* Middle container */
+.middle-container {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Profile Section */
+.profile {
+    margin: 20px 0;
+    margin-bottom: 20px;
+}
+
+.circular {
+    border-radius: 50%;
+}
+
+h1 {
+    font-size: 2em;
+    margin-top: 20px;
+}
+
+.intro {
+    font-size: 1.2em;
+    color: #555;
+}
+
+.social-icons {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.icon {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.icon img {
+    width: 40px;
+    height: 40px;
+}
+
+
+
+
+
+/* Genel info-card düzenlemeleri */
+.info-card {
+    background-color: #f8f9fa; /* Açık gri arka plan */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+/* Başlık düzenlemeleri */
+.info-card h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Her bir bilgi öğesi */
+.info-item {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+/* Bilgilerdeki başlıklar */
+.info-item strong {
+    color: #333;
+}
+/* Dil öğelerini hizalama */
+.language {
+    display: flex;
+    flex-direction: column; /* Her dil bilgisi alt alta gelsin */
+    margin-top: 5px;
+}
+
+/* Her dil öğesinin düzeni */
+.language-item {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+/* Dil öğelerinde başlıkları stilize etme */
+.language-item strong {
+    color: #333;
+}
+
+
+/* Responsive düzenlemeler */
+@media (max-width: 768px) {
+    .info-card {
+        padding: 15px;
+    }
+
+    .info-card h1 {
+        font-size: 1.6rem;
+    }
+
+    .info-item {
+        font-size: 0.9rem;
+    }
+}
+
+
+
+
+
+
+
+
+/* Genel skill-row düzenlemeleri */
+.skill-row {
+    background-color: #f8f9fa; /* Açık gri arkaplan */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+/* Başlık düzenlemeleri */
+.skill-row h3 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* İçerik metni düzenlemeleri */
+.skill-row p {
+    font-size: 1rem;
+    color: #1c1b1b;
+}
+
+/* Alt başlık düzenlemeleri */
+.skill-row h4 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-top: 15px;
+}
+
+/* Durum metni düzenlemeleri */
+.skill-row strong {
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+/* Carousel Genel Görünüm */
+.carousel-inner {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 30px;
+}
+
+/* Carousel Resim Arkaplanı */
+.carousel-item .d-block {
+    background: linear-gradient(135deg, #debaf7 0%, #2159bb 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Carousel İçeriği */
+.carousel-caption {
+    border-radius: 8px;
+    padding: 20px;
+    transition: all 0.3s ease;
+}
+
+.carousel-caption h5 {
+    color: #ffffff;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.carousel-caption p {
+    color: #f1f1f1;
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.carousel-caption a {
+    display: inline-block;
+    background-color: #d9c9e1;
+    color: #fff;
+    padding: 9px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.carousel-caption a:hover {
+    background-color: #8c52f1;
+    text-decoration: none;
+}
+
+/* Carousel Navigation Buttons */
+.carousel-control-prev,
+.carousel-control-next {
+    width: 5%;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    padding: 10px;
+    transition: background 0.3s ease;
+}
+
+.carousel-control-prev-icon:hover,
+.carousel-control-next-icon:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Responsive Düzenlemeler */
+@media (max-width: 768px) {
+    .carousel-caption {
+        padding: 10px;
+    }
+
+    .carousel-caption h5 {
+        font-size: 1.5rem;
+    }
+
+    .carousel-caption p {
+        font-size: 0.9rem;
+    }
+}
+
+
+/* Footer */
+.bottom-container {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-link {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.1em;
+}
+
+.footer-link:hover {
+    text-decoration: underline;
+}
+
+.copyright {
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: #bbb;
+}
