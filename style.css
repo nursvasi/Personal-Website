@@ -41,14 +41,17 @@ h1 {
     color: #555;
 }
 
-.social-icons {
-    margin-top: 20px;
-    margin-bottom: 20px;
+
+.social-icons .icon img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease, filter 0.3s ease;
 }
 
-.icon {
-    margin: 0 10px;
+.social-icons .icon {
     display: inline-block;
+    margin: 0 10px;
+    text-decoration: none;
 }
 
 .icon img {
@@ -62,51 +65,43 @@ h1 {
 
 /* Genel info-card düzenlemeleri */
 .info-card {
-    background-color: #f8f9fa; /* Açık gri arka plan */
-    padding: 20px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease;
+    margin: 50px auto;
+    padding: 25px;
+    background-color: #f8f9fa;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 30px;
 }
 
-/* Başlık düzenlemeleri */
+.info-card.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.info-item {
+    margin: 10px 0;
+    padding: 8px;
+    border-bottom: 1px solid #eee;
+}
+
+.language {
+    margin-left: 20px;
+}
+
+.language-item {
+    margin: 5px 0;
+}
+
+/* Info-card başlık stili */
 .info-card h1 {
-    font-size: 2rem;
-    font-weight: bold;
     color: #333;
     margin-bottom: 20px;
+    font-size: 2.2rem;
+    font-weight: bold;
+    text-align: center;
 }
-
-/* Her bir bilgi öğesi */
-.info-item {
-    font-size: 1rem;
-    color: #555;
-    margin-bottom: 10px;
-}
-
-/* Bilgilerdeki başlıklar */
-.info-item strong {
-    color: #333;
-}
-/* Dil öğelerini hizalama */
-.language {
-    display: flex;
-    flex-direction: column; /* Her dil bilgisi alt alta gelsin */
-    margin-top: 5px;
-}
-
-/* Her dil öğesinin düzeni */
-.language-item {
-    font-size: 1rem;
-    color: #555;
-    margin-bottom: 5px;
-}
-
-/* Dil öğelerinde başlıkları stilize etme */
-.language-item strong {
-    color: #333;
-}
-
 
 /* Responsive düzenlemeler */
 @media (max-width: 768px) {
@@ -115,28 +110,39 @@ h1 {
     }
 
     .info-card h1 {
-        font-size: 1.6rem;
-    }
-
-    .info-item {
-        font-size: 0.9rem;
+        font-size: 1.5rem;
     }
 }
 
-
-
-
-
-
-
-
 /* Genel skill-row düzenlemeleri */
 .skill-row {
-    background-color: #f8f9fa; /* Açık gri arkaplan */
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease;
+    margin: 50px auto;
     padding: 20px;
+    text-align: center;
+    background-color: #f8f9fa;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 30px;
+}
+
+.skill-row.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Her skill-row için farklı gecikme süreleri */
+.skill-row:nth-child(1) {
+    transition-delay: 0.2s;
+}
+
+.skill-row:nth-child(2) {
+    transition-delay: 0.4s;
+}
+
+.skill-row:nth-child(3) {
+    transition-delay: 0.6s;
 }
 
 /* Başlık düzenlemeleri */
@@ -164,11 +170,6 @@ h1 {
 .skill-row strong {
     font-weight: bold;
 }
-
-
-
-
-
 
 
 /* Carousel Genel Görünüm */
@@ -203,7 +204,7 @@ h1 {
 .carousel-caption p {
     color: #f1f1f1;
     font-size: 1rem;
-    margin-bottom: 10px;
+    margin-bottom: 20px;  /* Paragraf ile buton arası mesafeyi artırdım */
 }
 
 .carousel-caption a {
@@ -214,11 +215,17 @@ h1 {
     border-radius: 5px;
     text-decoration: none;
     transition: background 0.3s ease;
+    margin-top: 15px;    /* Üstten mesafe ekledim */
 }
 
 .carousel-caption a:hover {
     background-color: #8c52f1;
     text-decoration: none;
+}
+
+/* Tech-stack ve buton arasındaki mesafe */
+.tech-stack {
+    margin-bottom: 15px;  /* Tech-stack ile buton arası mesafe */
 }
 
 /* Carousel Navigation Buttons */
@@ -254,7 +261,154 @@ h1 {
         font-size: 0.9rem;
     }
 }
+/* Teknoloji rozetleri */
+.tech-stack {
+    margin-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+}
 
+.tech-badge {
+    background: rgba(255,255,255,0.1);
+    color: #fff;
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 14px;
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+.skills-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 15px;
+}
+
+.skill-category {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.skill-category:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+
+.skill-category h4 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    position: relative;
+    padding-bottom: 8px;
+}
+
+.skill-category h4::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 40px;
+    height: 3px;
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    border-radius: 3px;
+    transform: translateX(-50%);
+}
+
+.skill-category .tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skill-category .tech-badge {
+    background: #8c52f1;
+    color: white;
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.skill-category .tech-badge:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    background: #7440d3;
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+    align-items: center;
+}
+
+.skill-item {
+    background: linear-gradient(135deg, #646d93, #716284);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+.skill-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: 0.5s;
+}
+
+.skill-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.skill-item:hover::before {
+    left: 100%;
+}
+
+@media (max-width: 768px) {
+    .skills-container {
+        gap: 15px;
+    }
+    
+    .skill-category {
+        padding: 10px;
+    }
+    
+    .skill-category h4 {
+        font-size: 1.1rem;
+    }
+    
+    .skill-category .tech-badge {
+        font-size: 12px;
+    }
+    
+    .skill-item {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+    
+    .skills-list {
+        gap: 8px;
+    }
+}
 
 /* Footer */
 .bottom-container {
@@ -280,3 +434,4 @@ h1 {
     font-size: 0.9em;
     color: #bbb;
 }
+
