@@ -249,39 +249,71 @@ h1 {
 
 /* Responsive Düzenlemeler */
 @media (max-width: 768px) {
-    .carousel-caption {
-        position: relative;
-        background: rgba(0,0,0,0.8);
-        padding: 15px;
-        left: 0;
-        right: 0;
+    .carousel-item {
+        min-height: 100%;
+        height: auto;
+        background: #2a2a2a;  /* Koyu arka plan */
     }
 
+    .carousel-item .d-block {
+        height: 200px !important;  /* Resim alanı yüksekliği */
+    }
+
+    .carousel-caption {
+        position: relative;
+        background: #2a2a2a;  /* Koyu arka plan */
+        padding: 20px 15px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: auto;
+        color: white;
+    }
+
+    .carousel-inner {
+        height: auto;
+        background: #2a2a2a;
+    }
+
+    /* İçerik stilleri */
     .carousel-caption h5 {
         font-size: 18px;
-        margin-bottom: 10px;
+        margin-bottom: 12px;
+        padding: 0 10px;
     }
 
     .carousel-caption p {
         font-size: 14px;
-        line-height: 1.4;
+        line-height: 1.5;
+        margin-bottom: 15px;
+        padding: 0 10px;
     }
 
     .tech-stack {
-        gap: 6px;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+        margin: 15px 0;
+        padding: 0 10px;
     }
 
     .tech-badge {
         font-size: 12px;
-        padding: 4px 8px;
+        padding: 5px 10px;
     }
 
-    .carousel-item {
-        height: auto;
+    /* Github link stili */
+    .carousel-caption a {
+        display: inline-block;
+        margin: 10px 0;
+        padding: 8px 20px;
     }
 
-    .carousel-item .d-block {
-        height: 250px !important;  /* Mobilde daha küçük resim yüksekliği */
+    /* Kontrol butonları */
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 10%;
+        background: rgba(0,0,0,0.5);
     }
 }
 /* Teknoloji rozetleri */
