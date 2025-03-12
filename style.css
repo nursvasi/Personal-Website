@@ -250,15 +250,38 @@ h1 {
 /* Responsive Düzenlemeler */
 @media (max-width: 768px) {
     .carousel-caption {
-        padding: 10px;
+        position: relative;
+        background: rgba(0,0,0,0.8);
+        padding: 15px;
+        left: 0;
+        right: 0;
     }
 
     .carousel-caption h5 {
-        font-size: 1.5rem;
+        font-size: 18px;
+        margin-bottom: 10px;
     }
 
     .carousel-caption p {
-        font-size: 0.9rem;
+        font-size: 14px;
+        line-height: 1.4;
+    }
+
+    .tech-stack {
+        gap: 6px;
+    }
+
+    .tech-badge {
+        font-size: 12px;
+        padding: 4px 8px;
+    }
+
+    .carousel-item {
+        height: auto;
+    }
+
+    .carousel-item .d-block {
+        height: 250px !important;  /* Mobilde daha küçük resim yüksekliği */
     }
 }
 /* Teknoloji rozetleri */
